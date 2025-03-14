@@ -24,6 +24,17 @@ namespace WebAPIDatabaseLinq2.Controllers
             return r;
         }
 
+        [HttpHead]
+        public IActionResult HeadEmployees(int id)
+        {
+            var employee = _db.GetTable<Employee>().FirstOrDefault(x => x.Id == id);
+            if (employee == null)
+            {
+                return NotFound();
+            }
+            return Ok(employee);
+        }
+
         [HttpPost]
         public void AddEmployees(int id, string name, string position, decimal salary)
         {

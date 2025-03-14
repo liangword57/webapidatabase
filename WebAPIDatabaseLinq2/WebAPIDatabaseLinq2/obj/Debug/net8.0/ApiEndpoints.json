@@ -21,6 +21,22 @@
   },
   {
     "ContainingType": "WebAPIDatabaseLinq2.Controllers.EmployeesController",
+    "Method": "HeadEmployees",
+    "RelativePath": "api/Employees",
+    "HttpMethod": "HEAD",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPIDatabaseLinq2.Controllers.EmployeesController",
     "Method": "AddEmployees",
     "RelativePath": "api/Employees",
     "HttpMethod": "POST",
