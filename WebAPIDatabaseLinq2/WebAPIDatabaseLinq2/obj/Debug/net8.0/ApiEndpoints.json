@@ -84,6 +84,28 @@
     ]
   },
   {
+    "ContainingType": "WebAPIDatabaseLinq2.Controllers.EmployeesController",
+    "Method": "DeleteEmployees",
+    "RelativePath": "api/Employees",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "WebAPIDatabaseLinq2.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

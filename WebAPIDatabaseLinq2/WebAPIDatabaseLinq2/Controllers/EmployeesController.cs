@@ -49,5 +49,15 @@ namespace WebAPIDatabaseLinq2.Controllers
                 _db.Update(employee);
             }
         }
+
+        [HttpDelete]
+        public void DeleteEmployees(int id)
+        {
+            var employee = _db.GetTable<Employee>().FirstOrDefault(x => x.Id == id);
+            if (employee != null)
+            {
+                _db.Delete(employee);
+            }
+        }
     }
 }
