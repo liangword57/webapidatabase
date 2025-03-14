@@ -85,6 +85,33 @@
   },
   {
     "ContainingType": "WebAPIDatabaseLinq2.Controllers.EmployeesController",
+    "Method": "UpdateEmployeesSalary",
+    "RelativePath": "api/Employees",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "salary",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebAPIDatabaseLinq2.Controllers.EmployeesController",
     "Method": "DeleteEmployees",
     "RelativePath": "api/Employees",
     "HttpMethod": "DELETE",

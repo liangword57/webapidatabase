@@ -50,6 +50,17 @@ namespace WebAPIDatabaseLinq2.Controllers
             }
         }
 
+        [HttpPatch]
+        public void UpdateEmployeesSalary(int id, decimal salary)
+        {
+            var employee = _db.GetTable<Employee>().FirstOrDefault(x => x.Id == id);
+            if (employee != null)
+            {
+                employee.Salary = salary;
+                _db.Update(employee);
+            }
+        }
+
         [HttpDelete]
         public void DeleteEmployees(int id)
         {
