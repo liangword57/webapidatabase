@@ -13,6 +13,7 @@ namespace WebAPIDatabaseLinq2.Controllers
         {
             _db = db;
         }
+
         [HttpGet]
         public Employee[] GetEmployees()
         {
