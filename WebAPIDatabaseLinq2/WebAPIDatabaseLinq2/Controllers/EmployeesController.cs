@@ -23,5 +23,18 @@ namespace WebAPIDatabaseLinq2.Controllers
                     select employee;
             return r;
         }
+
+        [HttpPost]
+        public void AddEmployees(int id,string name,string position,decimal salary)
+        {
+            Employee employee = new Employee
+            {
+                Id = id,
+                Name = name,
+                Position = position,
+                Salary = salary
+            };
+            _db.Insert(employee);
+        }
     }
 }
