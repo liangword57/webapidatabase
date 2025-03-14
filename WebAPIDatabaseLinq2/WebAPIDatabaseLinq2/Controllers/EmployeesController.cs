@@ -25,7 +25,7 @@ namespace WebAPIDatabaseLinq2.Controllers
         }
 
         [HttpPost]
-        public void AddEmployees(int id,string name,string position,decimal salary)
+        public void AddEmployees(int id, string name, string position, decimal salary)
         {
             Employee employee = new Employee
             {
@@ -35,6 +35,19 @@ namespace WebAPIDatabaseLinq2.Controllers
                 Salary = salary
             };
             _db.Insert(employee);
+        }
+
+        [HttpPut]
+        public void UpdateEmployees(int id, Employee updateEmployee)
+        {
+            var employee = _db.GetTable<Employee>().FirstOrDefault(x => x.Id == id);
+            if (employee != null)
+            {
+                employee.Name = updateEmployee.Name;
+                employee.Position = updateEmployee.Position;
+                employee.Salary = updateEmployee.Salary;
+                _db.Update(employee);
+            }
         }
     }
 }
