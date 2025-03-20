@@ -40,3 +40,5 @@ C:\Work\studygit\webapidatabase\WebAPIDatabaseLinq2\WebAPIDatabaseLinq2\obj\Debu
 C:\Work\studygit\webapidatabase\WebAPIDatabaseLinq2\WebAPIDatabaseLinq2\obj\Debug\net8.0\WebAPIDatabaseLinq2.pdb
 C:\Work\studygit\webapidatabase\WebAPIDatabaseLinq2\WebAPIDatabaseLinq2\obj\Debug\net8.0\WebAPIDatabaseLinq2.genruntimeconfig.cache
 C:\Work\studygit\webapidatabase\WebAPIDatabaseLinq2\WebAPIDatabaseLinq2\obj\Debug\net8.0\ref\WebAPIDatabaseLinq2.dll
+C:\Work\studygit\webapidatabase\WebAPIDatabaseLinq2\WebAPIDatabaseLinq2\bin\Debug\net8.0\System.Reactive.dll
+C:\Work\studygit\webapidatabase\WebAPIDatabaseLinq2\WebAPIDatabaseLinq2\bin\Debug\net8.0\System.Reactive.Linq.dll
