@@ -8,19 +8,19 @@ namespace WebAPIDatabaseLinq2.Controllers
 {
     [Route("api/Employees")]
     [ApiController]
-    public class EmployeesController : ControllerBase
+    public class EmployeesController(AppDataConnection db) : ControllerBase
     {
-        private readonly AppDataConnection _db;
-        public EmployeesController(AppDataConnection db)
-        {
-            _db = db;
-        }
+        //private readonly AppDataConnection db;
+        //public EmployeesController(AppDataConnection db)
+        //{
+        //    this.db = db;
+        //}
 
         [HttpGet]
         public Employee[] GetEmployees()
         {
-            var r = _db.GetTable<Employee>().Where(x => x.Id == 1).ToArray();
-            var q = from employee in _db.GetTable<Employee>()
+            var r = db.GetTable<Employee>().Where(x => x.Id == 1).ToArray();
+            var q = from employee in db.GetTable<Employee>()
                     where employee.Id == 1
                     select employee;
             return r;
@@ -29,7 +29,7 @@ namespace WebAPIDatabaseLinq2.Controllers
         [HttpHead]
         public IActionResult HeadEmployees(int id)
         {
-            var employee = _db.GetTable<Employee>().FirstOrDefault(x => x.Id == id);
+            var employee = db.GetTable<Employee>().FirstOrDefault(x => x.Id == id);
             if (employee == null)
             {
                 return NotFound();
@@ -47,40 +47,40 @@ namespace WebAPIDatabaseLinq2.Controllers
                 Position = position,
                 Salary = salary
             };
-            _db.Insert(employee);
+            db.Insert(employee);
         }
 
         [HttpPut]
         public void UpdateEmployees(int id, Employee updateEmployee)
         {
-            var employee = _db.GetTable<Employee>().FirstOrDefault(x => x.Id == id);
+            var employee = db.GetTable<Employee>().FirstOrDefault(x => x.Id == id);
             if (employee != null)
             {
                 employee.Name = updateEmployee.Name;
                 employee.Position = updateEmployee.Position;
                 employee.Salary = updateEmployee.Salary;
-                _db.Update(employee);
+                db.Update(employee);
             }
         }
 
         [HttpPatch]
         public void UpdateEmployeesSalary(int id, decimal salary)
         {
-            var employee = _db.GetTable<Employee>().FirstOrDefault(x => x.Id == id);
+            var employee = db.GetTable<Employee>().FirstOrDefault(x => x.Id == id);
             if (employee != null)
             {
                 employee.Salary = salary;
-                _db.Update(employee);
+                db.Update(employee);
             }
         }
 
         [HttpDelete]
         public void DeleteEmployees(int id)
         {
-            var employee = _db.GetTable<Employee>().FirstOrDefault(x => x.Id == id);
+            var employee = db.GetTable<Employee>().FirstOrDefault(x => x.Id == id);
             if (employee != null)
             {
-                _db.Delete(employee);
+                db.Delete(employee);
             }
         }
     }
