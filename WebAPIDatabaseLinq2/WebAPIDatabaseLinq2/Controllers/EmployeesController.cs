@@ -6,7 +6,7 @@ using System.Reactive.Linq;
 
 namespace WebAPIDatabaseLinq2.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/Employees")]
     [ApiController]
     public class EmployeesController : ControllerBase
     {

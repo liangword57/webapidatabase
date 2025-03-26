@@ -10,6 +10,7 @@
     <PackageReference Include="linq2db" Version="5.4.1" />
     <PackageReference Include="linq2db.AspNet" Version="5.4.1" />
     <PackageReference Include="linq2db.PostgreSQL" Version="5.4.1" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Protocols.MessagePack" Version="9.0.3" />
     <PackageReference Include="Npgsql" Version="9.0.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
     <PackageReference Include="System.Reactive" Version="6.0.1" />
