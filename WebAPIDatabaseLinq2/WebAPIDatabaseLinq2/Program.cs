@@ -16,6 +16,12 @@ var conn = builder.Configuration.GetConnectionString("DefaultConnection");
 //注册AppDataConnection为服务
 builder.Services.AddLinqToDBContext<AppDataConnection>((option, config) => config.UsePostgreSQL(conn));
 
+//添加SignalR服务
+builder.Services.AddSignalR();
+
+//添加后台服务
+builder.Services.AddHostedService<DataChangeMonitor>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -30,5 +36,11 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+//SignalR
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapHub<DataHub>("/dataHub");
+});
 
 app.Run();
