@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "WebAPIDatabaseLinq2.Controllers.DataController",
+    "Method": "GetStream",
+    "RelativePath": "api/Data/stream",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "WebAPIDatabaseLinq2.Controllers.EmployeesController",
     "Method": "GetEmployees",
     "RelativePath": "api/Employees",

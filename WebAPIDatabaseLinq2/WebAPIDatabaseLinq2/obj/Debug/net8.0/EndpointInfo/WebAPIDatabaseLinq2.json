@@ -5,6 +5,18 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/Data/stream": {
+      "get": {
+        "tags": [
+          "Data"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Employees": {
       "get": {
         "tags": [

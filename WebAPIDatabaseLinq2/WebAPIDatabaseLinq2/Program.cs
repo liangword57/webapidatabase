@@ -22,6 +22,9 @@ builder.Services.AddSignalR();
 //添加后台服务
 builder.Services.AddHostedService<DataChangeMonitor>();
 
+//添加数据服务
+builder.Services.AddScoped<DataService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -38,6 +41,8 @@ app.UseAuthorization();
 app.MapControllers();
 
 //SignalR
+app.UseRouting();
+app.UseAuthorization();
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapHub<DataHub>("/dataHub");
