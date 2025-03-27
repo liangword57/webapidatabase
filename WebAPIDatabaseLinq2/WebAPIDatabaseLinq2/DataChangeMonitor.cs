@@ -6,18 +6,11 @@ using System.Threading.Tasks;
 
 namespace WebAPIDatabaseLinq2
 {
-    public class DataChangeMonitor : BackgroundService
+    public class DataChangeMonitor(IHubContext<DataHub> hubContext) : BackgroundService
     {
-        private readonly IHubContext<DataHub> _hubContext;
-
-        public DataChangeMonitor(IHubContext<DataHub> hubContext)
-        {
-            _hubContext = hubContext;
-        }
-
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            await _hubContext.Clients.All.SendAsync("StartListening");
+            await hubContext.Clients.All.SendAsync("StartListening");
         }
     }
 }

@@ -13,9 +13,10 @@ namespace WebAPIDatabaseLinq2
         {
             _connectionString = configuration.GetConnectionString("DefaultConnection");
         }
+
         public async Task SubscribeToDataChanges()
         {
-            using (var connection=new Npgsql.NpgsqlConnection(_connectionString))
+            using (var connection = new Npgsql.NpgsqlConnection(_connectionString))
             {
                 await connection.OpenAsync();
                 connection.Notification += OnDataChanged;
@@ -42,7 +43,7 @@ namespace WebAPIDatabaseLinq2
 
         private async Task<object> GetUpdatedDataFromDatabase()
         {
-            using (var db=new AppDataConnection(_connectionString)) 
+            using (var db = new AppDataConnection(_connectionString))
             {
                 var query = from employee in db.GetTable<Employee>()
                         select employee;
