@@ -53,7 +53,7 @@ namespace WebAPIDatabaseLinq2
         //    }
         //}
 
-        public async Task StartListening()
+        public async Task StartListening() 
         {
             await SubscribeToDataChanges();
         }
@@ -78,7 +78,7 @@ namespace WebAPIDatabaseLinq2
                  handler => connection.Notification += new Npgsql.NotificationEventHandler(handler)
             ))
             .Where(e => e.EventArgs.Channel == "data_change")
-            .SelectMany(async _ => await GetUpdatedDataFromDatabase())
+            .SelectMany(async _ => await GetUpdatedDataFromDatabase()).Throttle(TimeSpan.FromMilliseconds(500))
             .SelectMany(data => Observable.FromAsync(async () => await Clients.All.SendAsync("ReceiveDataUpdate", data)));
 
             notificationObservable.Subscribe();
