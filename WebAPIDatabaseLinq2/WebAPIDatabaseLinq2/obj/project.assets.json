@@ -2716,11 +2716,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Work\\studygit\\webapidatabase\\WebAPIDatabaseLinq2\\WebAPIDatabaseLinq2\\WebAPIDatabaseLinq2.csproj",
+      "projectUniqueName": "C:\\Work\\study\\GitHubRepository\\webapidatabase\\WebAPIDatabaseLinq2\\WebAPIDatabaseLinq2\\WebAPIDatabaseLinq2.csproj",
       "projectName": "WebAPIDatabaseLinq2",
-      "projectPath": "C:\\Work\\studygit\\webapidatabase\\WebAPIDatabaseLinq2\\WebAPIDatabaseLinq2\\WebAPIDatabaseLinq2.csproj",
+      "projectPath": "C:\\Work\\study\\GitHubRepository\\webapidatabase\\WebAPIDatabaseLinq2\\WebAPIDatabaseLinq2\\WebAPIDatabaseLinq2.csproj",
       "packagesPath": "C:\\Users\\liang\\.nuget\\packages\\",
-      "outputPath": "C:\\Work\\studygit\\webapidatabase\\WebAPIDatabaseLinq2\\WebAPIDatabaseLinq2\\obj\\",
+      "outputPath": "C:\\Work\\study\\GitHubRepository\\webapidatabase\\WebAPIDatabaseLinq2\\WebAPIDatabaseLinq2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

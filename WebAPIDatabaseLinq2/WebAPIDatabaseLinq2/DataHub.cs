@@ -42,7 +42,7 @@ namespace WebAPIDatabaseLinq2
 
         private async Task<object> GetUpdatedDataFromDatabase()
         {
-            using (var db=new AppDataConnection(_connectionString))
+            using (var db=new AppDataConnection(_connectionString)) 
             {
                 var query = from employee in db.GetTable<Employee>()
                         select employee;

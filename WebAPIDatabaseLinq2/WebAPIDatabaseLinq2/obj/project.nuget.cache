@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qVdm4bWzKWY=",
+  "dgSpecHash": "+JqtqD5XjEM=",
   "success": true,
-  "projectFilePath": "C:\\Work\\studygit\\webapidatabase\\WebAPIDatabaseLinq2\\WebAPIDatabaseLinq2\\WebAPIDatabaseLinq2.csproj",
+  "projectFilePath": "C:\\Work\\study\\GitHubRepository\\webapidatabase\\WebAPIDatabaseLinq2\\WebAPIDatabaseLinq2\\WebAPIDatabaseLinq2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\liang\\.nuget\\packages\\linq2db\\5.4.1\\linq2db.5.4.1.nupkg.sha512",
     "C:\\Users\\liang\\.nuget\\packages\\linq2db.aspnet\\5.4.1\\linq2db.aspnet.5.4.1.nupkg.sha512",

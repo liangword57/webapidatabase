@@ -10,7 +10,7 @@ namespace WebAPIDatabaseLinq2
     {
         private readonly IHubContext<DataHub> _hubContext;
 
-        public DataChangeMonitor(IHubContext<DataHub> hubContext, IServiceScopeFactory scopeFactory)
+        public DataChangeMonitor(IHubContext<DataHub> hubContext)
         {
             _hubContext = hubContext;
         }
